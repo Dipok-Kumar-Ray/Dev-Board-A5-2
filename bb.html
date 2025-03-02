@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button Counter</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+
+
+
+
+
+        <section id="main">
+            <header class="w-11/12 p-6 ml-6">
+                <nav class="bg-white flex items-center justify-between p-4">
+                    <div class="flex items-center gap-2">
+                        <div>
+                            <img class="ml-4" src="A5-Dev-Board/assets/logo.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-3xl font-bold text-black">DevBoard </h1>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-10 items-center">
+                        <div class="flex border  border-none bg-slate-300 w-26 p-2 gap-6 rounded-lg">
+                            <img class="w-10 h-10 " src="A5-Dev-Board/assets/checkbox.png" alt="">
+                            <span id="increase" class="font-bold text-3xl text-black">24</span>
+                        </div>
+                        <!-- <button class="btn" onclick="changeColor()"><img src="A5-Dev-Board/assets/theme-btn.png" alt=""></button> -->
+                        <button class=" border-none hover:bg-white" onclick="changeColor()"><img class="w-10 h-12 bg-white hover:bg-white" src="A5-Dev-Board/assets/theme-btn.png" alt=""></button>
+
+                    </div>
+                </nav>
+            </header>
+
+
+
+            <section class="flex p-6 mx-10">
+                <section>
+
+                    <div class=" flex w-6/4 gap-10 bg-white p-10 justify-between ">
+                        <div class="flex gap-2 bg-red-100 w-2/3/3 items-center p-4 rounded-md w-40">
+                            <div>
+                                <img src="A5-Dev-Board/assets/checkbox.png" alt="">
+                            </div>
+                            <div class="">
+                                <h1 class="font-bold text-black">Task Assigned</h1>
+                                <h1 id="decrease" class="font-bold text-black">6</h1>
+                            </div>
+                        </div>
+                        <div id="newPage" class="flex bg-red-400 items-center rounded-md">
+                            <div>
+                                <img src="A5-Dev-Board/assets/board.png" alt="">
+                            </div>
+                            <div>
+                                <h1 class="text-black font-bold">Discover Something New Today!</h1>
+                            </div>
+                        </div>
+                        <div class="flex bg-red-600 items-center p-1 w-40 rounded-md">
+                            <div>
+                                <img src="A5-Dev-Board/assets/calender.png" alt="">
+                            </div>
+                            <div>
+                                <h1 id="month" class="ml-1 text-black font-bold">Wed ,
+                                    <br> Jul 28 2025
+                                    <div class="year">
+
+                                    </div>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="grid grid-cols-3 w-11/12 mx-4 my-10 gap-10 ">
+                        <div class="bg-gray-200 w-80 h-80 rounded-lg">
+                            <div class="">
+                                <h1 class="border border-blue-300 bg-white w-20 ml-4 text-black font-bold my-2">ShopEase</h1>
+
+                                <h2 id="p-taitle" class="text-black font-bold text-3xl ml-4 ">Fix Mobile Button Issue </h2>
+                                <p class="mx-2 bg-white">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="my-10">
+                                        <h1 class="text-black font-bold ml-4">Deadline</h1>
+                                        <h1 id="khan" class="text-black ml-4 mb-1"> 21 March 2025</h1>
+                                    </div>
+                                </div>
+                                <!--  <button id="btn1" onclick="countNumber('btn1')" class="border border-blue-300 bg-green-400 text-white font-bold p-2 mr-5 mb-4 mt-2">Completed</button> -->
+                                <button id="btn1" onclick="handleClick('btn1')" class="btn btn-primary mr-4">Button 1</button>
+                            </div>
+                        </div>
+
+
+                        <div class="bg-gray-200 w-80 h-80 rounded-lg">
+                            <div class="">
+                                <h1 class="border border-blue-300 bg-white py-2 w-20 ml-4 text-black font-bold my-2 text-sm mx-2 border-none">CloudSync</h1>
+                                <h2 id="p-taitle" class="text-black font-bold text-3xl ml-4 ">Add Dark Mode</h2>
+                                <p class="mx-2 bg-white my-5">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div>
+                                        <h1 class="text-black font-bold ml-4">Deadline</h1>
+                                        <h1 class="text-black ml-4 mb-1">21 March 2025</h1>
+                                    </div>
+                                </div>
+                                <button id="btn2" onclick="handleClick('btn2')" class="btn btn-success mr-4">Button 2</button>
+                            </div>
+                        </div>
+
+
+                        <div class="bg-gray-200 w-80 h-80 rounded-lg">
+                            <div class="">
+                                <h1 class="border border-blue-300 bg-white border-none w-20 ml-4 text-black font-bold my-2">SwiftPay</h1>
+                                <h2 id="p-taitle" class="text-black font-bold text-3xl ml-4 ">Optimize Home page </h2>
+                                <p class="mx-2 my-2 bg-white">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div>
+                                        <h1 class="text-black font-bold ml-4">Deadline</h1>
+                                        <h1 class="text-black ml-4 mb-1">21 March 2025</h1>
+                                    </div>
+                                </div>
+                                <button id="btn3" onclick="handleClick('btn3')" class="btn btn-error mr-4">Button 3</button>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="bg-gray-200 w-80 h-80 rounded-lg">
+                            <div class="">
+                                <h1 class="border border-blue-300 bg-white w-20 ml-4 text-black font-bold my-2 border-none">Meta</h1>
+                                <h2 id="p-taitle" class="text-black font-bold text-3xl ml-4 ">Add new emoji 🤲 </h2>
+                                <p class=" mx-2 my-5 bg-white">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <h1 class="text-black font-bold ml-4">Deadline</h1>
+                                        <h1 class="text-black ml-4 mb-1">21 March 2025</h1>
+                                    </div>
+                                    <button id="btn4" onclick="handleClick('btn4')" class="btn btn-warning ml-20">Button 4</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="bg-gray-200 w-80 h-80 rounded-lg">
+                            <div class="">
+                                <h1 class="border border-blue-300 bg-white my-2 w-20 ml-4 text-black font-bold text-sm ">Google LLC</h1>
+                                <h2 id="p-taitle" class="text-black font-bold text-3xl ml-4 ">Integrate OpenAI API </h2>
+                                <p class="mx-2 my-5 bg-white p-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <h1 class="text-black font-bold ml-4">Deadline</h1>
+                                        <h1 class="text-black ml-4 mb-1">21 March 2025</h1>
+                                    </div>
+                                    <button id="btn5" onclick="handleClick('btn5')" class="btn btn-info ml-20">Button 5</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="bg-gray-200 w-80 h-80 rounded-lg">
+                            <div class="">
+                                <h1 class="border border-blue-300 bg-white  my-2 border-none  w-20 ml-4 text-black font-bold">Glassdoar</h1>
+                                <h2 id="p-taitle" class="text-black font-bold text-3xl ml-4 ">Improve Job searching </h2>
+                                <p class="my-5 mx-2 bg-white">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div>
+                                        <h1 class="text-black font-bold ml-4">Deadline</h1>
+                                        <h1 class="text-black ml-4 mb-1">21 March 2025</h1>
+                                    </div>
+                                </div>
+                                <button id="btn6" onclick="handleClick('btn6', true)" class="btn btn-secondary mr-4">Button 6</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section class="ml-20">
+                <section id="activity" class="ml-10 bg-blue-900">
+                    <div class="flex mt-10 items-center ml-40 gap-2">
+                        <div>
+                            <img src="A5-Dev-Board/assets/activity.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-black font-bold mr-20">Activity Log</h1>
+                        </div>
+                    </div>
+                    <button id="btn" class="border border-blue-700 bg-blue-900 p-2 text-black font-bold ml-40 mt-6">Clear History</button>
+
+
+                    <div class="log" id="log">
+                        <h3 id="history"></h3>
+                    </div>
+                </section>
+            </section>
+
+
+
+        </section>
+
+
+
+        <section id="main2" class="hidden">
+
+            <header class="w-11/12 p-6 ml-6 ">
+                <nav class="bg-white flex items-center justify-between p-4">
+                    <div class="flex items-center gap-2">
+                        <div>
+                            <img class="ml-4" src="A5-Dev-Board/assets/logo.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-3xl font-bold text-black">DevBoard </h1>
+                        </div>
+                    </div>
+
+                    <div id="back" class="flex gap-10 items-center border p-3 bg-blue-700">
+                        <h1 class="text-black font-bold">Back To Dask</h1>
+                    </div>
+                </nav>
+            </header>
+            <h1 class="text-3xl text-center font-bold">Blogs</h1>
+            <div class="w-11/12 p-6 ml-6">
+                <div class="bg-white">
+                    <h1 class="my-4 text-black font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <hr>
+                    <p class="p-4 text-2xl"><span class="underline text-black text-3xl">Answer:</span><br>(1)document.getElementById (2)document.getElementByClassName (3)document.getElementByTagName (4)document.querySelector(5)document.querySelectorAll</p>
+                </div>
+
+
+                <div class="bg-white my-4">
+                    <h1 class="my-4 text-black font-bold">What is the difference between innerHTML, innerText, and textContent ?</h1>
+                    <hr>
+                    <p>(1)innerHTML=Returns or sets the HTML content of an element including HTLM tags. (2)innetText=Returns or sets thr visible text inside an element considering CSS style . (3)textContent=Returns or sets all text content of an element,including
+                        hidden text, but dies not parse HTML.
+                    </p>
+                </div>
+
+
+                <div class="bg-white my-4">
+                    <h1 class="my-4 text-black font-bold">Question-3: What is event delegation in the DOM?</h1>
+                    <hr>
+                    <p>Event delegation is a technique in JavaScript where a single event listener is added to a parent element to handle events on its child elements. This works because of event bubbling.</p>
+                </div>
+
+
+                <div class="bg-white my-4">
+                    <h1 class="my-4 text-black font-bold">Question-4: What is event bubbling in the DOM?</h1>
+                    <hr> Event bubbling is a mechanism where an event starts from the target element and propagates (bubbles) up to its parent elements
+
+                </div>
+                <div class="bg-white my-4">
+                    <h1 class="my-4 text-black font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                    <hr>
+                    <p class="p-8 mb-4">document.createElement, let parent = document.getElementById("container"); let reference = document.getElementById("existing"); parent.insertBefore(newDiv, reference), element.remove();
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <script src="./optonal.js"></script>
+
+    </body>
+
+    </html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev-Board Project</title>
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/7f09317bdd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="max-w-screen-lg mx-auto py-5 items-center">
+      <nav class="flex bg-blue-50 justify-between items-center mx-2 px-3">
+        <div class="flex gap-4 items-center">
+          <img class="h-7 w-7" src="assets/logo.png" alt="" />
+          <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+        </div>
+        <div class="flex gap-4 items-center">
+          <div class="flex items-center bg-pink-100 rounded-md p-2">
+            <img class="h-7 w-7" src="assets/checkbox.png" alt="" />
+            <span id="increment" class="text-gray-700 font-bold p-1">24</span>
+          </div>
+          <img
+            onclick="colorChange()"
+            class="h-7 w-7"
+            src="assets/theme-btn.png"
+            alt=""
+          />
+        </div>
+      </nav>
+    </header>
+    <div class="max-w-screen-lg min-h-screen mx-auto py-4 bg-gray-200">
+      <!-- navbar starting -->
+
+      <!--  -->
+      <section class="flex">
+        <section>
+          <div class="grid grid-cols-4 gap-2 w-11/12 max-w-screen-lg my-4 mx-4">
+            <!-- Left sidebar -->
+            <aside class="bg-white rounded-xl shadow-md">
+              <div class="flex items-center text-center rounded-lg p-2 mx-2">
+                <div>
+                  <img class="items-center" src="assets/checkbox.png" alt="" />
+                </div>
+                <div class="gap-3">
+                  <h3 class="text-gray-600 font-bold">Task Assigned</h3>
+                  <span id="decrement" class="text-3xl font-bold">6</span>
+                </div>
+              </div>
+            </aside>
+
+            <!-- main content -->
+
+            <main
+              onclick="redirectPage()"
+              class="col-span-2 flex flex-col space-y-2 py-4"
+            >
+              <div
+                class="flex bg-yellow-400 text-center rounded-xl p-2 shadow-md"
+              >
+                <img src="assets/board.png" alt="" />
+                <div>
+                  <p class="text-lg font-bold text-white">
+                    Discover Something New Today!
+                  </p>
+                </div>
+              </div>
+            </main>
+            <div
+              class="flex items-center bg-blue-400 text-center rounded-xl p-4 shadow-md"
+            >
+              <div class="justify-center items-center h-full w-full">
+                <img src="assets/calender.png" alt="" />
+              </div>
+              <span id="demo" class="text-sm text-white"
+                >Sun, March 02, 2025</span
+              >
+            </div>
+          </div>
+
+          <section class="grid grid-cols-3 grid-rows-2 gap-3 w-11/12 px-4 py-3">
+            <!-- task number-1 -->
+            <div class="bg-white rounded-xl p-6 shadow-md">
+              <p class="text-sm text-gray-500 font-semibold">shopEase</p>
+              <h4 id="p-taitle" class="text-lg font-bold text-gray-700">
+                Fix Mobile Button Issue
+              </h4>
+              <p class="text-sm text-gray-500">
+                Store the user's preference in LocalStorage , Update...
+              </p>
+              <span id="dateLine" class="block text-xs text-gray-500 mt-2"
+                >Dateline: 21 March 2025</span
+              >
+              <button id="btn2" onclick="handleClick('btn2')" class="btn btn-success mr-4 bg-blue-600">Completed</button>
+            </div>
+            <!-- task number-2 -->
+            <div class="bg-white rounded-xl p-4 shadow-md">
+              <p class="text-sm text-gray-500 font-semibold">cloudSync</p>
+              <h4 id="p-taitle" class="text-lg font-bold text-gray-700">Add Dark Mode</h4>
+              <p class="text-sm text-gray-500">
+                Store the user's preference in LocalStorage , Update...
+              </p>
+              <span id="dateLine" class="block text-xs text-gray-500 mt-2"
+                >Dateline: 21 March 2025</span
+              >
+              <button id="btn3" onclick="handleClick('btn3')" class="btn btn-error mt-14 bg-blue-600">Completed</button>
+            </div>
+            <!-- task number-3 -->
+            <div class="bg-white rounded-xl p-4 shadow-md">
+              <p class="text-sm text-gray-500 font-semibold">SwiftPay</p>
+              <h4 id="p-taitle" class="text-lg font-bold text-gray-700">
+                Optimize Home Page
+              </h4>
+              <p class="text-sm text-gray-500">
+                Store the user's preference in LocalStorage , Update...
+              </p>
+              <span id="demo" class="block text-xs text-gray-500 mt-2"
+                >Dateline: 21 March 2025</span
+              >
+              <button id="btn4" onclick="handleClick('btn4')" class="btn btn-warning mt-6 bg-blue-600">Completed</button>
+            </div>
+            <!-- task number-4 -->
+            <div class="bg-white rounded-xl p-4 shadow-md">
+              <p class="text-sm text-gray-500 font-semibold">Meta</p>
+              <h4 id="p-taitle" class="text-lg font-bold text-gray-700">Add new Emoji</h4>
+              <i class="fa-solid text-red-400 fa-hands-praying"></i>
+              <p class="text-sm text-gray-500">
+                Store the user's preference in LocalStorage , Update...
+              </p>
+              <span id="demo" class="block text-xs text-gray-500 mt-2"
+                >Dateline: 21 March 2025</span
+              >
+              <button id="btn5" onclick="handleClick('btn5')" class="btn btn-info mt-6 bg-blue-600">Completed</button>
+            </div>
+            <!-- task number-5 -->
+            <div class="bg-white rounded-xl p-4 shadow-md">
+              <p class="text-sm text-gray-500 font-semibold">google LLC</p>
+              <h4 id="p-taitle" class="text-lg font-bold text-gray-700">Add Dark Mode</h4>
+              <p class="text-sm text-gray-500">
+                Store the user's preference in LocalStorage , Update...
+              </p>
+              <span id="demo" class="block text-xs text-gray-500 mt-2"
+                >Dateline: 21 March 2025</span
+              >
+              <button id="btn1" onclick="handleClick('btn1')" class="btn btn-primary mr-4 mt-12 bg-blue-600 text-black">Completed</button>
+            </div>
+            <!-- task number-6 -->
+            <div class="bg-white rounded-xl p-4 shadow-md">
+              <p class="text-sm text-gray-500 font-semibold">Glassdoar</p>
+              <h4 id="p-taitle" class="text-lg font-bold text-gray-700">Add Dark Mode</h4>
+              <p class="text-sm text-gray-500">
+                Store the user's preference in LocalStorage , Update...
+              </p>
+              <span id="Dateline" class="block text-xs text-gray-500 mt-2"
+                >Dateline: 21 March 2025</span
+              >
+              <button id="btn6" onclick="handleClick('btn6', true)" class="btn btn-secondary mr-4 mt-12 bg-blue-600 text-black">Completed</button>
+              
+            </div>
+
+            <!-- <div class="w-1/4 bg-slate-100 h-full"></div> -->
+          </section>
+        </section>
+        <section class="bg-white max-w-2xl w-2/4 py-0 mx-5 rounded-lg">
+          <div>
+            <div class="flex px-9 justify-center items-center gap-3 pt-5">
+              <img class="h-7 w-7" src="assets/activity.png" alt="" />
+              <h3 class="">Activity Log</h3>
+            </div>
+            <div class="px-20">
+              <button
+              id="clearHistory"
+              class="mt-10 bg-blue-600 text-white py-1 px-3 rounded-lg "
+            >
+              Clear History
+            </button>
+            </div>
+          </div>
+          <!-- <div id="clear"></div> -->
+         <div id="log" class="ml-6">
+          <h1 id="history"></h1>
+         </div>
+        </section>
+      </section>
+    </div>
+    <script src="javascript.js"></script>
+   
+  </body>
+</html>

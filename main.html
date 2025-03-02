@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Plate</title>
+    <script
+      src="https://kit.fontawesome.com/7f09317bdd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="px-20 py-10 bg-indigo-200">
+    <div
+      class="flex bg-slate-200 justify-between items-center rounded-lg px-3 py-5"
+    >
+      <div class="flex justify-center items-center">
+        <span class="h-7 w-7 mr-3"><img src="assets/logo.png" alt="" /></span>
+        <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+      </div>
+      <button onclick="reloadPage()" class="bg-blue-600 text-white rounded-lg px-4 py-2">
+        Back to Desk
+      </button>
+    </div>
+    <div>
+      <h1
+        class="text-gray-900 text-center text-3xl font-extrabold justify-center mt-11 mb-6"
+      >
+        Blogs
+      </h1>
+    </div>
+
+    <div>
+      <!-- first question and answer -->
+      <section class="mb-7">
+        <div class="mb-2">
+          <h3 class="bg-slate-200 text-gray-900 font-bold p-5 rounded-lg">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h3>
+        </div>
+        <div class="rounded-lg">
+          <p class="bg-white text-gray-600 text-md rounded-lg p-5">
+            <span class="text-black font-bold">Answer</span> :
+            <span class="text-2xl font-semibold"
+              >1. Selecting by ID Method:</span
+            >
+            document.getElementById() Description: Selects a single element by
+            its unique id attribute. Returns: A single Element object or null if
+            no matching element is found.
+            <span class="text-2xl font-semibold"
+              >2. Selecting by Class Name Method:</span
+            >
+            document.getElementsByClassName() Description: Selects all elements
+            that have a specific class name. Returns: A live HTMLCollection of
+            elements (array-like object).
+            <span class="text-2xl font-semibold"
+              >3. Selecting by Tag Name Method:</span
+            >
+            document.getElementsByTagName() Description: Selects all elements
+            with a specific tag name (e.g., div, p, a). Returns: A live
+            HTMLCollection of elements.
+          </p>
+        </div>
+      </section>
+
+      <!-- second question and answer -->
+      <section class="mb-7">
+        <div class="mb-2">
+          <h3 class="bg-slate-200 text-gray-900 font-bold px-5 rounded-lg">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h3>
+        </div>
+        <div class="rounded-lg">
+          <p class="bg-white text-gray-600 text-md rounded-lg p-5">
+            <span class="text-black font-bold">Answer</span> :
+            <span class="text-2xl font-semibold">1. innerHTML:</span> Retrieves
+            or sets the HTML content inside an element, including all HTML tags
+            and text. When setting, it interprets the string as HTML and renders
+            it.
+            <span class="text-2xl font-semibold">2. innerText:</span> Retrieves
+            or sets the visible text content of an element, excluding hidden
+            elements (e.g., elements with display: none or visibility:
+            hidden).It respects CSS styling and layout, so it only returns text
+            that is actually rendered on the page
+            <span class="text-2xl font-semibold">3. textContent:</span> What it
+            does: Retrieves or sets the text content of an element, including
+            all child nodes, regardless of visibility or CSS. It does not
+            include HTML tags and ignores styling or layout.
+          </p>
+        </div>
+      </section>
+
+      <!-- third question and answer -->
+      <section class="mb-7">
+        <div class="mb-2">
+          <h3 class="bg-slate-200 text-gray-900 font-bold px-5 rounded-lg">
+            Question-3: What is event delegation in the DOM?
+          </h3>
+        </div>
+        <div class="rounded-lg">
+          <p class="bg-white text-gray-600 text-md rounded-lg p-5">
+            <span class="text-black font-bold">Answer</span> :
+            <span class="text-2xl font-semibold"> 1. Event Bubbling :</span>
+            When an event (e.g., a click) occurs on a child element, it bubbles
+            up through its parent elements in the DOM hierarchy. This means the
+            parent element can "listen" for events that occur on its children.
+            <span class="text-2xl font-semibold">2. Event Listener:</span>
+            Instead of attaching an event listener to each child element, you
+            attach a single event listener to a common parent element. The
+            parent element then handles events for all its children.
+            <span class="text-2xl font-semibold"> 3. Event Target: </span>
+            Inside the event handler, you use the event.target property to
+            identify the specific child element that triggered the event.
+          </p>
+        </div>
+      </section>
+
+      <!-- fourth question and answer -->
+      <section class="mb-7">
+        <div class="mb-2">
+          <h3 class="bg-slate-200 text-gray-900 font-bold px-5 rounded-lg">
+            Question-4: What is event bubbling in the DOM?
+          </h3>
+        </div>
+        <div class="rounded-lg">
+          <p class="bg-white text-gray-600 text-md rounded-lg p-5">
+            <span class="text-black font-bold">Answer</span> : Bubbling in the
+            DOM is an event propagation method. It starts with an event
+            triggering on the innermost element and then proceeds to trigger the
+            same event on its parent element and then its parent's parent
+            element and so on.Event bubbling is a type of DOM event propagation
+            where the event first triggers on the innermost target element, and
+            then successively triggers on the ancestors (parents) of the target
+            element in the same nesting hierarchy till it reaches the outermost
+            DOM element or document object (Provided the handler is ...)
+          </p>
+        </div>
+      </section>
+
+      <!-- fifth question and answer -->
+      <section>
+        <div class="mb-2">
+          <h3 class="bg-slate-200 text-gray-900 font-bold px-5 rounded-lg">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h3>
+        </div>
+        <div class="rounded-lg">
+          <p class="bg-white text-gray-600 text-md rounded-lg p-5">
+            <span class="text-black font-bold">Answer</span> :
+            <span class="text-2xl font-semibold"> 1. Creating Elements:</span>
+            To create a new element, use the document.createElement() method.
+            This method creates an element but does not add it to the DOM.
+            <span class="text-2xl font-semibold">2. Adding Elements:</span> Once
+            an element is created, you can add it to the DOM using one of the
+            following methods: a. Append to a Parent Element Use
+            parentElement.appendChild() to add the new element as the last child
+            of a parent element.
+            <span class="text-2xl font-semibold">3. Removing Elements:</span> To
+            remove an element from the DOM, use the remove() method or
+            parentElement.removeChild(). a. Using remove() This method removes
+            the element directly
+          </p>
+        </div>
+      </section>
+    </div>
+    <script src="javascript.js"></script>
+    <script src="index.html"></script>
+  </body>
+</html>
